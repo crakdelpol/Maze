@@ -24,4 +24,13 @@ public class Room implements MapSite {
     public void enter() {
 
     }
+
+    @Override
+    public String toString() {
+        return "RoomNumber " + roomNumber + " sides " + sides;
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
 }

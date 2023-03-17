@@ -9,4 +9,9 @@ public class DoorNeedingSpell extends Door {
     public void enter() {
         super.enter();
     }
+
+    @Override
+    public String toString() {
+        return "Door needing spell";
+    }
 }

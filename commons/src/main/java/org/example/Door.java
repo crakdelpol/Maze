@@ -13,4 +13,9 @@ public class Door implements MapSite {
     public void enter() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Door";
+    }
 }

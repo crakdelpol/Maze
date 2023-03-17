@@ -7,4 +7,9 @@ public class EnchantedRoom extends Room {
         super(roomNo);
         this.castSpell = castSpell;
     }
+
+    @Override
+    public String toString() {
+        return "Enchanted Room";
+    }
 }
