@@ -1,8 +1,30 @@
 # Maze game
 
-Same problem with different creational patterns. 
+Same problem "solved" with different creational patterns. 
 
-You can see code with smells in MazeGame.class 
+You can see code with smells in  [MazeGame.java](bad-implementation%2Fsrc%2Fmain%2Fjava%2Forg%2Fexample%2FMazeGame.java) 
+
+```java
+    public static void main(String[] args) {
+        Maze maze = new Maze();
+        Room r1 = new Room(1);
+        Room r2 = new Room(2);
+
+        Door theDoor = new Door(r1, r2);
+        maze.addRoom(r1);
+        maze.addRoom(r2);
+
+        r1.setSide(North, new Wall());
+        r1.setSide(East, theDoor);
+        r1.setSide(North, new Wall());
+        r1.setSide(North, new Wall());
+
+        r2.setSide(North, new Wall());
+        r2.setSide(East, theDoor);
+        r2.setSide(North, new Wall());
+        r2.setSide(North, new Wall());
+    }
+```
 
 Dirty code work but has several problems in the next step of future implementations.
 Below the class diagram of this simple project 
